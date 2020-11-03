@@ -1,0 +1,37 @@
+server:
+  port: 8081
+
+person:
+  lastName: zhangsan${random.uuid}
+  age: 18
+  boss: false
+  birth: 2011/11/11
+  maps: {k1: v1,K2: v2}
+  email: xxx@qq.com
+  lists:
+    lisi
+    zhaoliu
+  dog:
+    name: ${person.lastName}_小黑
+    age: ${person.hello:小黑}_2
+
+
+---
+server:
+  port: 8084
+spring:
+  profiles:
+    active: dev
+# 激活dev环境
+---
+server:
+  port: 8086
+spring:
+  profiles: dev
+# 命名dev环境
+---
+server:
+  port: 8090
+spring:
+  profiles: prod
+# 命名prod环境
