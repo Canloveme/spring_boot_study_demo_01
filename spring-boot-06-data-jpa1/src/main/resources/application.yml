@@ -1,0 +1,14 @@
+# 数据连接配置
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///springboot?serverTimezone=UTC
+
+  jpa:
+    hibernate:
+    # 更新或者创建数据表结构
+      ddl-auto: update
+    # 控制台显示sql
+    show-sql: true
